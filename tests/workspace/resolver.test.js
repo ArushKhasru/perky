@@ -108,19 +108,19 @@ test('getProjectServices parses services array, frontend/backend, startCmd', () 
 });
 
 test('getClosestMatch retrieves closest suggestion', () => {
-  const candidates = ['AruApp', 'Backend', 'Frontend'];
+  const candidates = ['perkyApp', 'Backend', 'Frontend'];
 
   // substring match
   assert.equal(getClosestMatch('backend', candidates), 'Backend');
-  assert.equal(getClosestMatch('aru', candidates), 'AruApp');
+  assert.equal(getClosestMatch('perky', candidates), 'perkyApp');
 
   // Levenshtein close match
-  assert.equal(getClosestMatch('aruap', candidates), 'AruApp'); // 1 edit distance
+  assert.equal(getClosestMatch('perkyap', candidates), 'perkyApp'); // 1 edit distance
 
   // Too far
   assert.equal(getClosestMatch('xyz', candidates), null);
 
   // Empty inputs
   assert.equal(getClosestMatch('', candidates), null);
-  assert.equal(getClosestMatch('aru', []), null);
+  assert.equal(getClosestMatch('perky', []), null);
 });

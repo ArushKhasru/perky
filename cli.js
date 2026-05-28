@@ -22,7 +22,7 @@ const program = new Command();
 program
   .name('perky')
   .description('AI-powered developer assistant and workspace launcher')
-  .version('0.0.2')
+  .version('0.0.3')
   .showHelpAfterError()
   .showSuggestionAfterError()
   .addHelpText('after', `

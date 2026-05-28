@@ -47,13 +47,13 @@ test('getByPath, setByPath, and deleteByPath modify object paths', () => {
   const obj = {
     user: {
       profile: {
-        name: 'Arush'
+        name: 'perkysh'
       }
     }
   };
 
   // getByPath
-  assert.equal(getByPath(obj, 'user.profile.name'), 'Arush');
+  assert.equal(getByPath(obj, 'user.profile.name'), 'perkysh');
   assert.equal(getByPath(obj, 'user.missing.key'), undefined);
 
   // setByPath

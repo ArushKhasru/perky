@@ -36,5 +36,9 @@ export function launchDetached(command, args = [], options = {}) {
 
     child.once('spawn', onSpawn);
     child.once('error', onError);
+
+    if (child.pid) {
+      queueMicrotask(onSpawn);
+    }
   });
 }

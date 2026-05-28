@@ -11,10 +11,17 @@ AI-powered developer assistant and workspace launcher for Windows-first workflow
 - `perky summarize` log summarization with local JSON summary and optional AI insight
 - `perky time` show the current local time (use `--live` to update continuously)
 - `perky open` open project editor, browser URLs, terminal, and file explorer
-- `perky app <name>` open an installed application (shorthand: `perky <app>`)
+- `perky app <name>` open an installed application (shorthand: `perky <app>`), e.g. Chrome, Brave, YouTube (if installed)
 - `perky start` run configured services concurrently (attached or detached)
 - `perky go` normalize/open/copy/print URLs quickly
 - `perky config` set/get/list/add-project/remove-project/edit global config
+
+## Install (npm)
+```bash
+npm i perky
+# or
+npm i -g perky
+```
 
 ## Install (local dev)
 ```bash
@@ -48,7 +55,7 @@ perky start myapp
 perky go github.com
 ```
 
-Use `perky open <project>` to open a configured project; the shorthand `perky <app>` is reserved for installed apps.
+Use `perky open <project>` to open a configured project; the shorthand `perky <app>` is reserved for installed desktop apps like Chrome/Brave/YouTube (if installed).
 
 ## Configuration
 Global config is stored at `~/.perky/config.json`. Project-local config is `.perky.json`.
